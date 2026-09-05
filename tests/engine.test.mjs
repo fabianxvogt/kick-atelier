@@ -48,6 +48,7 @@ test('portable projects round-trip and malformed versions fail intentionally', (
   assert.equal(parsed.patch.clickAmount, 0.7);
   assert.throws(() => decodeProject('{"format":"wrong","version":1}'), /Unsupported project version/);
   assert.throws(() => decodeProject('not json'), /could not be parsed/);
+  assert.throws(() => decodeProject('x'.repeat(100001)), /over the 100 KB limit/);
 });
 
 test('WAV export declares mono PCM16 and exact payload size', async () => {

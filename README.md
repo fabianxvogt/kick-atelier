@@ -17,7 +17,7 @@ Open the local URL printed by the dev server. Click **Start audio** once, then u
 - Time/amplitude waveform and spectrum glance update as the patch changes.
 - A/B level-matched comparison with optional metronome and tempo control.
 - Single-hit, 4-beat test-loop, and four-file variation-set WAV exports.
-- Local save/restore plus versioned JSON project import/export with malformed-input and size-limit errors.
+- Local save/restore plus versioned JSON project import/export, with file upload or paste fallback and malformed-input/size-limit errors.
 
 Supported target: current desktop Chromium and narrow mobile Chromium. Safari is untested. Audio is mono at 48 kHz; supported single-hit duration is 0.12–3.2 seconds and output is bounded at -1 dBFS ceiling.
 

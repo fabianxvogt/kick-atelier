@@ -40,7 +40,7 @@ State: verification (v1 implemented locally; a few browser-harness checks remain
 | Eight source presets | `PRESETS` array and sidebar | implemented + tested |
 | Single hit/test loop/batch WAV | Render Desk actions and RIFF encoder | implemented + tested |
 | Fixed seed, duration, finite bounded extremes | `tests/engine.test.mjs` | tested |
-| Save/reload/export/import | localStorage and v1 JSON contract | implemented + tested |
+| Save/reload/export/import | localStorage and v1 JSON contract, with file upload or paste fallback | implemented + tested |
 | Malformed/oversized input | `decodeProject`, 100 KB import limit | implemented + tested |
 | Desktop Chromium + narrow mobile | fresh desktop and 390×844 Chromium journeys; patch-file controls remain available on mobile | verified |
 
