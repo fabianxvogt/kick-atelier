@@ -1,6 +1,6 @@
 # Kick Atelier roadmap
 
-State: verification (v1 complete locally; publication awaits independent review/release instruction)
+State: verification (v1 implemented locally; a few browser-harness checks remain; publication awaits independent review/release instruction)
 
 ## Now
 
