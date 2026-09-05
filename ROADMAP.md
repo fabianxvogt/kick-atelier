@@ -36,12 +36,12 @@ State: verification (v1 complete locally; publication awaits independent review/
 | Intentional pitch/transient/body envelopes | Pitch/body/texture controls and render model | implemented + tested |
 | Click and drive | Click controls and soft clip stage | implemented + tested |
 | Waveform/spectrum | Canvas scopes update on patch change | implemented + desktop browser QA |
-| Level-matched comparison with metronome | A/B cards, normalization, 8-beat transport | implemented + desktop browser QA |
+| Level-matched comparison with metronome | Peak matching over each complete hit window to the -1 dBFS linear ceiling; quiet material stays quiet; 8-beat transport | implemented + tested + desktop browser QA |
 | Eight source presets | `PRESETS` array and sidebar | implemented + tested |
 | Single hit/test loop/batch WAV | Render Desk actions and RIFF encoder | implemented + tested |
 | Fixed seed, duration, finite bounded extremes | `tests/engine.test.mjs` | tested |
 | Save/reload/export/import | localStorage and v1 JSON contract | implemented + tested |
 | Malformed/oversized input | `decodeProject`, 100 KB import limit | implemented + tested |
-| Desktop Chromium + narrow mobile | fresh desktop Chromium journey; narrow viewport control unavailable after extension debugger disconnect | desktop verified; mobile pending |
+| Desktop Chromium + narrow mobile | fresh desktop and 390×844 Chromium journeys; patch-file controls remain available on mobile | verified |
 
 Classification: INCREMENTAL. This is a practical sound-design instrument; it makes no claim of club-translation validation or scientific novelty.

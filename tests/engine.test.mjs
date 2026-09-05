@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { DEFAULT_PATCH, decodeProject, encodeProject, renderKick, renderLoop, writeWav } from '../lib/kick-engine.js';
+import { DEFAULT_PATCH, decodeProject, encodeProject, levelMatch, renderKick, renderLoop, writeWav } from '../lib/kick-engine.js';
 
 test('fixed seed reproduces the noise layer exactly', () => {
   const a = renderKick({ ...DEFAULT_PATCH, seed: 99 });
@@ -19,6 +19,16 @@ test('extreme supported parameters remain finite and bounded', () => {
   const samples = renderKick(extreme, 12000);
   assert.ok(samples.length <= 12000 * 3.2);
   assert.ok(samples.every((value) => Number.isFinite(value) && Math.abs(value) <= 0.89125));
+});
+
+test('comparison peak matching preserves a quiet output gap', () => {
+  const loudCandidate = Float32Array.from([1, -0.5, 0.25]);
+  const quietPatch = renderKick({ ...DEFAULT_PATCH, output: -18 });
+  const matchedLoud = levelMatch(loudCandidate);
+  const peak = (samples) => Math.max(...Array.from(samples, (value) => Math.abs(value)));
+  assert.ok(Math.abs(peak(matchedLoud) - 0.8912) < 0.00001);
+  assert.ok(peak(quietPatch) < peak(matchedLoud) / 2);
+  assert.deepEqual(Array.from(levelMatch(quietPatch)), Array.from(quietPatch));
 });
 
 test('portable projects round-trip and malformed versions fail intentionally', () => {
