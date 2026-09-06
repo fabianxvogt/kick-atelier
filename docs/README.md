@@ -2,6 +2,7 @@
 
 - [Project brief](../../docs/projects/MUSIC.md), section 82, defines the user outcome and acceptance contract.
 - [ROADMAP.md](../ROADMAP.md) records the bounded v1 scope, evidence and release state.
+- [Release evidence](RELEASE.md) records the public Site, exact saved version, runtime-byte verification and evidence boundaries.
 - `lib/kick-engine.js` is the portable deterministic synthesis and serialization core.
 - `tests/engine.test.mjs` covers seed reproducibility, exact duration, finite bounded extremes, loop length and project errors.
 
