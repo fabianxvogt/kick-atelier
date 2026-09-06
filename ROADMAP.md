@@ -1,16 +1,17 @@
 # Kick Atelier roadmap
 
-State: verification (v1 implemented locally; a few browser-harness checks remain; publication awaits independent review/release instruction)
+State: verification (v1 implemented; reviewed source preview published; paste UI and public Sites demo remain gated)
 
 ## Now
 
-- Browser QA at desktop Chromium; narrow-viewport automation is pending a stable browser debugger connection.
+- Non-interactive acceptance of export/import, bounded batch rendering, cancellation paths and error guards.
+- Browser QA at desktop Chromium is recorded; paste UI and any fresh deployed-user journey await an unlocked, parent-granted browser window.
 - Review staged source for secrets, private planning, generated output and recordings.
 - Verify the static build and retain the exact source commit for review.
 
 ## Next
 
-- Publish the reviewed static build through Sites.
+- Publish the reviewed static build through Sites after the browser gate and release instruction.
 - Recheck the deployed fresh-user journey and export path.
 
 ## Later
@@ -40,8 +41,8 @@ State: verification (v1 implemented locally; a few browser-harness checks remain
 | Eight source presets | `PRESETS` array and sidebar | implemented + tested |
 | Single hit/test loop/batch WAV | Render Desk actions and RIFF encoder | implemented + tested |
 | Fixed seed, duration, finite bounded extremes | `tests/engine.test.mjs` | tested |
-| Save/reload/export/import | localStorage and v1 JSON contract, with file upload or paste fallback | implemented + tested |
-| Malformed/oversized input | `decodeProject`, 100 KB import limit | implemented + tested |
+| Save/reload/export/import | localStorage and v1 JSON contract, with file upload or paste fallback | implemented + decoder-tested; paste UI browser check pending |
+| Malformed/oversized input | `decodeProject`, 100 KB import limit | implemented + tested; current patch preservation in paste handler source-reviewed |
 | Desktop Chromium + narrow mobile | fresh desktop and 390×844 Chromium journeys; patch-file controls remain available on mobile | verified |
 
-Classification: INCREMENTAL. This is a practical sound-design instrument; it makes no claim of club-translation validation or scientific novelty.
+Classification: INCREMENTAL. This is a practical sound-design instrument; it makes no claim of club-translation validation, human-test completion or scientific novelty.
