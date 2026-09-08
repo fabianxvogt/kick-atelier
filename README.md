@@ -1,3 +1,13 @@
+<!-- portfolio
+{
+  "title": "Kick Atelier",
+  "topic": "Music/Sound & rhythm",
+  "type": "product",
+  "description": "Kick Atelier — local-first deterministic techno kick sound-design lab",
+  "demo": "https://kick-atelier.fabian523417.chatgpt.site"
+}
+-->
+
 # Kick Atelier
 
 Kick Atelier is a local-first techno kick design lab. Start from one of eight original procedural source presets, shape pitch, body, click, noise, drive and tail, then audition, compare, save, reopen and export.
